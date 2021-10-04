@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "sofaSubs",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
