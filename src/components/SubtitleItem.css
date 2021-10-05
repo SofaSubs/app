@@ -1,0 +1,17 @@
+.container {
+  height: 100%;
+}
+
+.content {
+  padding: 10px;
+}
+
+.bg-blue {
+  background: #3880ff;
+  color: white;
+}
+
+.bg-white {
+  background: white;
+  color: black;
+}
