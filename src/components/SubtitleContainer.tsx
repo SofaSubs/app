@@ -1,11 +1,22 @@
 import "./SubtitleContainer.css";
 import SubtitleItem from "./SubtitleItem";
 
-const SubtitleContainer: React.FC = () => {
+import { IonIcon } from "@ionic/react";
+import { play, time } from "ionicons/icons";
+
+interface ContainerProps {
+  fileName: string;
+}
+
+const SubtitleContainer: React.FC<ContainerProps> = ({ fileName }) => {
+
+  const txtEnglish = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+  const txtSpanish = "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.";
   return (
     <div className="container">
-      <SubtitleItem backgroundColor="white" />
-      <SubtitleItem backgroundColor="blue" />
+      <p><IonIcon icon={play}/> {fileName}    <IonIcon icon={time}/> 35:28</p>
+      <SubtitleItem backgroundColor="white" language="Inglés" content={txtEnglish} />
+      <SubtitleItem backgroundColor="blue" language="Español" content={txtSpanish} />
     </div>
   );
 };

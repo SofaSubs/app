@@ -2,13 +2,16 @@ import "./SubtitleItem.css";
 
 interface ItemProps {
   backgroundColor: string;
+  language: string;
+  content: string;
 }
 
-const SubtitleItem: React.FC<ItemProps> = ({ backgroundColor }) => {
+const SubtitleItem: React.FC<ItemProps> = ({ backgroundColor, language, content }) => {
   return (
     <div className={`container bg-${backgroundColor}`}>
       <div className="content">
-        <h4>Subtitle Box {backgroundColor}</h4>
+      <h5><b>{language.toUpperCase()}</b></h5>
+        <p>{content}</p>
       </div>
     </div>
   );
